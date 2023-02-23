@@ -1,0 +1,3 @@
+vosk/model: vosk-model-small-es-0.42
+vosk/sample_rate: 16000
+vosk/blocksize: 16000

@@ -1,0 +1,17 @@
+<launch>
+
+  <!-- Launch Face Detection node -->
+  <include file="$(find people_perception)/launch/face_detection.launch"/>
+  <!-- Launch People Detection node -->
+  <include file="$(find people_perception)/launch/people_detection.launch"/>
+  
+  <node pkg="people_perception" type="people_tracking.py" name="people_tracking" output="screen">
+    <param name="camera_top_topic" type="string" value="/camera/top/image_raw"/>
+    <param name="camera_bottom_topic" type="string" value="/camera/bottom/image_raw"/>
+    <param name="face_topic" type="string" value="/perception/people/face"/>
+    <param name="body_topic" type="string" value="/perception/people/body"/>
+    <param name="cmd_vel_topic" type="string" value="/cmd_vel"/>
+    <param name="head_position_topic" type="string" value="/head_position"/>
+  </node>
+    
+</launch>

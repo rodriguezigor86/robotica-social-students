@@ -1,0 +1,5 @@
+# Service to play a motion in Webots
+string type
+string name
+---
+bool success

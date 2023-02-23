@@ -1,0 +1,15 @@
+<launch>
+
+  <!-- Launch Speech Recognition behavior -->
+  <include file="$(find speech)/launch/speech_recognition.launch"/>
+  <!-- Launch Text To Speech behavior -->
+  <include file="$(find speech)/launch/text_to_speech.launch"/>
+  <!-- Launch People Tracking behavior -->
+  <include file="$(find people_perception)/launch/people_tracking.launch"/>
+
+  <!-- Launch Cognition Controller -->
+  <node pkg="social_interaction" type="cognitive_control.py" name="cognitive_control" output="screen">
+    <param name="speech_recognition_text_topic" type="string" value="/speech/recognition/text"/>
+    <param name="tts_text_topic" type="string" value="/speech/tts/text"/>
+  </node>
+</launch>

@@ -1,0 +1,11 @@
+<launch>
+
+  <!-- Launch Speech Recognition behavior -->
+  <include file="$(find speech)/launch/speech_recognition.launch"/>
+
+  <!-- Launch Teleop Speech node -->
+  <node pkg="teleop_speech" type="teleop_speech.py" name="teleop_speech" output="screen">
+    <param name="speech_recognition_text_topic" type="string" value=""/>
+    <param name="cmd_vel_topic" type="string" value=""/>
+  </node>
+</launch>

@@ -1,0 +1,9 @@
+<launch>
+
+  <node name="asr" pkg="speech" type="asr.py" respawn="true" output="screen">
+    <param name="tts_status_topic" type="string" value="/speech/tts/status"/>
+    <param name="speech_recognition_text_topic" type="string" value="/speech/recognition/text"/>
+  </node>
+  <rosparam file="$(find speech)/config/params.yaml" command="load" ns="" />
+
+</launch>

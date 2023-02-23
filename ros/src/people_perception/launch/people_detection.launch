@@ -1,0 +1,10 @@
+<launch>
+  
+  <!-- Launch Face Detection node -->
+  <node pkg="people_perception" type="people_detection.py" name="people_detection" output="screen">
+    <param name="camera_top_topic" type="string" value="/camera/top/image_raw"/>
+    <param name="camera_bottom_topic" type="string" value="/camera/bottom/image_raw"/>
+    <param name="body_topic" type="string" value="/perception/people/body"/>
+    <param name="body_img_topic" type="string" value="/perception/people/body/image_raw"/>
+  </node>
+</launch>

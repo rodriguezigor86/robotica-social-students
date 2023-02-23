@@ -1,0 +1,40 @@
+//Node handle
+node_handle_.param("motion_Listening_1", wb_file_motion_Listening_1_, std::string("motions/Stand/BodyTalk/Listening//Listening_1.motion"));
+node_handle_.param("motion_Listening_2", wb_file_motion_Listening_2_, std::string("motions/Stand/BodyTalk/Listening//Listening_2.motion"));
+node_handle_.param("motion_Listening_3", wb_file_motion_Listening_3_, std::string("motions/Stand/BodyTalk/Listening//Listening_3.motion"));
+node_handle_.param("motion_Listening_4", wb_file_motion_Listening_4_, std::string("motions/Stand/BodyTalk/Listening//Listening_4.motion"));
+node_handle_.param("motion_Listening_5", wb_file_motion_Listening_5_, std::string("motions/Stand/BodyTalk/Listening//Listening_5.motion"));
+node_handle_.param("motion_Listening_6", wb_file_motion_Listening_6_, std::string("motions/Stand/BodyTalk/Listening//Listening_6.motion"));
+node_handle_.param("motion_Listening_7", wb_file_motion_Listening_7_, std::string("motions/Stand/BodyTalk/Listening//Listening_7.motion"));
+// load motion files
+wb_motion_Listening_1_         = new webots::Motion(wb_file_motion_Listening_1_);
+wb_motion_Listening_2_         = new webots::Motion(wb_file_motion_Listening_2_);
+wb_motion_Listening_3_         = new webots::Motion(wb_file_motion_Listening_3_);
+wb_motion_Listening_4_         = new webots::Motion(wb_file_motion_Listening_4_);
+wb_motion_Listening_5_         = new webots::Motion(wb_file_motion_Listening_5_);
+wb_motion_Listening_6_         = new webots::Motion(wb_file_motion_Listening_6_);
+wb_motion_Listening_7_         = new webots::Motion(wb_file_motion_Listening_7_);
+// Webots Motions files
+std::string wb_file_motion_Listening_1_;
+std::string wb_file_motion_Listening_2_;
+std::string wb_file_motion_Listening_3_;
+std::string wb_file_motion_Listening_4_;
+std::string wb_file_motion_Listening_5_;
+std::string wb_file_motion_Listening_6_;
+std::string wb_file_motion_Listening_7_;
+// Webots Motions
+webots::Motion* wb_motion_Listening_1_;
+webots::Motion* wb_motion_Listening_2_;
+webots::Motion* wb_motion_Listening_3_;
+webots::Motion* wb_motion_Listening_4_;
+webots::Motion* wb_motion_Listening_5_;
+webots::Motion* wb_motion_Listening_6_;
+webots::Motion* wb_motion_Listening_7_;
+// destructors
+delete wb_motion_Listening_1_;
+delete wb_motion_Listening_2_;
+delete wb_motion_Listening_3_;
+delete wb_motion_Listening_4_;
+delete wb_motion_Listening_5_;
+delete wb_motion_Listening_6_;
+delete wb_motion_Listening_7_;

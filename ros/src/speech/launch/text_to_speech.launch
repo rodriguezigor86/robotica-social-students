@@ -1,0 +1,9 @@
+<launch>
+  
+  <!-- Launch Text-to-Speech node -->
+  <node pkg="speech" type="tts.py" name="tts" output="screen">
+    <param name="tts_text_topic" type="string" value="/speech/tts/text"/>
+    <param name="tts_status_topic" type="string" value="/speech/tts/status"/>
+    <param name="audio_path" type="string" value="$(find speech)/audio/"/>
+  </node>
+</launch>

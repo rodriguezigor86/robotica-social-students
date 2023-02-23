@@ -1,0 +1,30 @@
+//Node handle
+node_handle_.param("motion_Remember_1", wb_file_motion_Remember_1_, std::string("motions/Stand/BodyTalk/Thinking//Remember_1.motion"));
+node_handle_.param("motion_Remember_2", wb_file_motion_Remember_2_, std::string("motions/Stand/BodyTalk/Thinking//Remember_2.motion"));
+node_handle_.param("motion_Remember_3", wb_file_motion_Remember_3_, std::string("motions/Stand/BodyTalk/Thinking//Remember_3.motion"));
+node_handle_.param("motion_ThinkingLoop_1", wb_file_motion_ThinkingLoop_1_, std::string("motions/Stand/BodyTalk/Thinking//ThinkingLoop_1.motion"));
+node_handle_.param("motion_ThinkingLoop_2", wb_file_motion_ThinkingLoop_2_, std::string("motions/Stand/BodyTalk/Thinking//ThinkingLoop_2.motion"));
+// load motion files
+wb_motion_Remember_1_         = new webots::Motion(wb_file_motion_Remember_1_);
+wb_motion_Remember_2_         = new webots::Motion(wb_file_motion_Remember_2_);
+wb_motion_Remember_3_         = new webots::Motion(wb_file_motion_Remember_3_);
+wb_motion_ThinkingLoop_1_         = new webots::Motion(wb_file_motion_ThinkingLoop_1_);
+wb_motion_ThinkingLoop_2_         = new webots::Motion(wb_file_motion_ThinkingLoop_2_);
+// Webots Motions files
+std::string wb_file_motion_Remember_1_;
+std::string wb_file_motion_Remember_2_;
+std::string wb_file_motion_Remember_3_;
+std::string wb_file_motion_ThinkingLoop_1_;
+std::string wb_file_motion_ThinkingLoop_2_;
+// Webots Motions
+webots::Motion* wb_motion_Remember_1_;
+webots::Motion* wb_motion_Remember_2_;
+webots::Motion* wb_motion_Remember_3_;
+webots::Motion* wb_motion_ThinkingLoop_1_;
+webots::Motion* wb_motion_ThinkingLoop_2_;
+// destructors
+delete wb_motion_Remember_1_;
+delete wb_motion_Remember_2_;
+delete wb_motion_Remember_3_;
+delete wb_motion_ThinkingLoop_1_;
+delete wb_motion_ThinkingLoop_2_;

@@ -1,0 +1,69 @@
+#VRML_SIM R2023a utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/floors/protos/Floor.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/robots/softbank/nao/protos/Nao.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/humans/skin_animated_humans/protos/CharacterSkin.proto"
+
+WorldInfo {
+  info [
+    "Aldebaran's Nao H25 V5.0"
+    "NAO is a programmable, 57-cm tall humanoid robot."
+    "The body has 25 degrees of freedom (DOF)."
+    "The sensors include 2 cameras, 4 microphones, sonar rangefinder, 2 IR emitters and receivers, 1 inertial board, and 8 pressure sensors."
+  ]
+  title "Aldebaran's Nao"
+  basicTimeStep 20
+  FPS 20
+  contactProperties [
+    ContactProperties {
+      material1 "NAO foot material"
+      coulombFriction [
+        7
+      ]
+      bounce 0.3
+      bounceVelocity 0.003
+    }
+  ]
+}
+Viewpoint {
+  orientation 0.22783350957636894 -0.21387606852117078 -0.9499204804761513 4.598031146918856
+  position 1.4141218165561589 -3.5127236427629724 1.9108103963782064
+  follow "NAO"
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+Floor {
+  rotation 0 0 1 1.57079632679
+  size 25 25
+  tileSize 0.8 0.8
+}
+Nao {
+  controller "nao_controller_node"
+  cameraWidth 320
+  cameraHeight 240
+}
+DEF ANTHONY Robot {
+  translation 2.84523 -1.25882 0.0
+  rotation 0 0 1 -2.0
+  scale 0.7 0.7 0.7
+  children [
+    CharacterSkin {
+      name "Anthony"
+      model "Anthony"
+    }
+  ]
+  name "anthony"
+  controller "bvh_animation"
+  controllerArgs [
+    "-d"
+    "Anthony"
+    "-f"
+    "../../motions/SkinAnimated/static.bvh"
+    "-l"
+  ]
+  supervisor TRUE
+}

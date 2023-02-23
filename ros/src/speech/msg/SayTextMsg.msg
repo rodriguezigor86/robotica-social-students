@@ -1,0 +1,2 @@
+string text
+string language #Spanish: es, English: en  
