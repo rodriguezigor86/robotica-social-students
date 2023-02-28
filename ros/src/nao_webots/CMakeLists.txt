@@ -116,7 +116,7 @@ target_link_libraries(nao_supervisor_node
   ${WEBOTS_CONTROLLER_LIB}
 )
 
-set(MY_CONTROLLER_PATH ~/irakaskuntza/robotica-social/ros/src/nao_webots/controllers)
+set(MY_CONTROLLER_PATH ~/robotica-social/ros/src/nao_webots/controllers)
 # copy executables to webots folder
 add_custom_command(TARGET nao_supervisor_node POST_BUILD
     # COMMAND ${CMAKE_COMMAND} -E make_directory "${WEBOTS_CONTROLLER_PATH}/nao_supervisor_node/"
